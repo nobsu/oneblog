@@ -128,7 +128,7 @@ class Page(db.Model):
                 parent_id = page.parent_id
             else:
                 break
-        return '/' + '/'.join(segments)
+        return '/' + '-'.join(segments)
 
     def __repr__(self):
         return '<Page %r>' % self.name

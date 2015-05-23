@@ -1,6 +1,5 @@
 {% extends "theme/girl/layout.html" %} {% block blogitem %} 
 
-
 {% if posts %}
     {% set i = 1 %}
     {% for post in posts %}
@@ -11,7 +10,7 @@
                     <a href="/post/{{ post.slug }}">{{ post.title }}</a>
                 </h2>
                 <ul class="text">
-                    {{post.html | truncate(200) | markdown | safe}}
+                    {{post.html | truncate(200, true) | markdown | safe}}
                 </ul>
                 <div class="textfoot">
                     <span>{{ post.create_time }}</span>
